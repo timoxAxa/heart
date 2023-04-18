@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: blue;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        
+    }
+
+    .title {
+        color: #ff3434;
+        font-size: 630px;
+        font-family: 'Tilt Prism', cursive;
+        font-weight: bold;
+        position: relative;
+        width: max-content;
+        animation: rotate 1.2s linear infinite;
+    }
+
+    .title::after {
+        content: "";
+        display: block;
+        height: 790px;
+        width: 7000px;
+        position: absolute;
+        left: 0;
+        transform:rotate(15deg);
+        background: linear-gradient(to left, transparent, white 70%, transparent);
+
+        animation: shade 1.2s linear infinite;
+        
+
+    }
+
+    @keyframes shade {
+        0% {
+            left: 0%;
+        }
+        25% {
+            left: 25%;
+        }
+        50% {
+            left: 50%;
+        }
+        75% {
+            left: 75%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+    
+    @keyframes rotate {
+        
+     0% { 
+  
+        transform : translateY(0);
+        opacity:1.0;
+   }
+   
+   50%{
+       opacity:0.5;
+   }
+   
+   75%{ 
+       
+    transform : translateY(-90deg); 
+    opacity:1.0;
+    }
+       100%{ 
+       
+       transform : translateY(-180deg); 
+       opacity:1.0;
+       }
+
+    }
+    
+    
+    
